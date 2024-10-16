@@ -7,6 +7,37 @@ public class SimpsonProgFuncional {
     private static final int MAX_FILA_TABLERO = 10;
     private static final int MAX_COLUMNA_TABLERO = 10;
     private static char [][] tablero;
+    private static void asignarcasillas(char caracter){
+        //2º rellenar tablero
+        for (int i = 0; i <MAX_FILA_TABLERO; i++) {
+            for (int j = 0; j <MAX_COLUMNA_TABLERO; j++) {
+                tablero[i][j] = 'caracter';
+            }
+        }
+
+    }
+    private static void AsignarBart(char caracter){
+        Random aleatorio = new Random();
+        int filaleatorio = aleatorio.nextInt(MAX_FILA_TABLERO);
+        int columnaaleatorio = aleatorio.nextInt(MAX_COLUMNA_TABLERO);
+
+        tablero[filaleatorio][columnaaleatorio] = 'B';
+
+    }
+    private static void asignarHomer(char caracter){
+        int filaleatorioHomer;
+        int columnaaleatorioHomer;
+        for (int i = 0; i < 10; i++) {
+            do {
+                filaleatorioHomer = aleatorio.nextInt(MAX_FILA_TABLERO);
+                columnaaleatorioHomer = aleatorio.nextInt(MAX_COLUMNA_TABLERO);
+
+            }while (tablero[filaleatorioHomer][columnaaleatorioHomer]!='L');
+
+            tablero[filaleatorioHomer][columnaaleatorioHomer] = 'H';
+        }
+
+    }
 
     public static void main(String[] args) {
         //1º inicio matriz tablero
