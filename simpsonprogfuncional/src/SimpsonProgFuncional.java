@@ -1,4 +1,4 @@
-package simpsonprogfuncional;
+package SimpsonProgFuncional;
 
 import java.util.Random;
 
