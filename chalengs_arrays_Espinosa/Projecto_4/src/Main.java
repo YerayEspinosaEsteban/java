@@ -1,66 +1,55 @@
 import java.util.Random;
 import java.util.Scanner;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
+// then press Enter. You can now see whitespace characters in your code.
 public class Main {
-    public static void main(String[] args) {
-    Random alea = new Random();
-    Scanner leer = new Scanner(System.in);
+    static final int Max_colum = 10;
+    static final int Fila_colum = 10;
+    static char tablero = new char[Max_colum][Fila_colum]
 
-    String arrayPrimitiva[] = new String[6];
-    for (int i = 0; i < arrayPrimitiva.length; i++) {
-        int numAle = alea.nextInt(100);
-        arrayPrimitiva[i] = String.valueOf(numAle);
-    }
-    for (int i = 0; i < arrayPrimitiva.length; i++) {
-        System.out.println(arrayPrimitiva[i]);
-
-       }
-        System.out.println("Dame un numero");
-        String cadUsuario = leer.next();
-        for (int i = 0; i < arrayPrimitiva.length; i++) {
-            if (cadUsuario.equals(arrayPrimitiva[i])) {
-                arrayPrimitiva[i] = "xx";
+    static int filaBart = 0;
+    static int ColumnaBart = 0;
+    static int filAleatorio = 0;
+    static int columnaAleatorio = 0;
+    static Random Aleatorio= new Random();
+    
+    private statitc void AsignarTablero(char character){
+        for (int i = 0; i < Max_colum; i++){
+            for (int j = 0; j < Fila_colum; i++){
+                tablero[i][j] = character;
             }
-        }
-        System.out.println("Dame un numero");
-        String cadUsuario2 = leer.next();
-        for (int i = 0; i < arrayPrimitiva.length; i++) {
-            if (cadUsuario2.equals(arrayPrimitiva[i])) {
-                arrayPrimitiva[i] = "xx";
-            }
-        }
-        System.out.println("Dame un numero");
-        String cadUsuario3 = leer.next();
-        for (int i = 0; i < arrayPrimitiva.length; i++) {
-            if (cadUsuario3.equals(arrayPrimitiva[i])) {
-                arrayPrimitiva[i] = "xx";
-            }
-        }
-        System.out.println("Dame un numero");
-        String cadUsuario4 = leer.next();
-        for (int i = 0; i < arrayPrimitiva.length; i++) {
-            if (cadUsuario4.equals(arrayPrimitiva[i])) {
-                arrayPrimitiva[i] = "xx";
-            }
-        }
-        System.out.println("Dame un numero");
-        String cadUsuario5 = leer.next();
-        for (int i = 0; i < arrayPrimitiva.length; i++) {
-            if (cadUsuario5.equals(arrayPrimitiva[i])) {
-                arrayPrimitiva[i] = "xx";
-            }
-        }
-        System.out.println("Dame un numero");
-        String cadUsuario6 = leer.next();
-        for (int i = 0; i < arrayPrimitiva.length; i++) {
-            if (cadUsuario6.equals(arrayPrimitiva[i])) {
-                arrayPrimitiva[i] = "xx";
-            }
-        }
-        for (int i = 0; i < arrayPrimitiva.length; i++) {
-            System.out.println(arrayPrimitiva[i]);
         }
     }
+
+       private statitc void Imprimir(char character){
+        for (int i = 0; i < Max_colum; i++){
+            for (int j = 0; j < Fila_colum; i++){
+            System.out.print(tablero[i][j] + " ");
+            }
+            System.out.println(" ");
+        }
+    }
+    private static void CasillaLibre(char charater, int interaciones)
+    Random Aleatori = new Aleatorio 
+    int filaAleatorio;
+    int columnaAleatorio;
+    for (int i = 0; i < interaciones; i++){
+        do{
+            filaAleatorio = aleatorio.nextInt(Max_colum);
+            columnaAleatorio = aleatorio.nextInt(Max_colum);
+
+        }while (tablero[filaAleatorio][columnaAleatorio]! = 'L');
+        tablero[filaAleatorio][columnaAleatorio] = character
+    }
+    
+
+ public static void main(String[] args) {
+    AsignarTablero('L')
+    Imprimir();
+    }
+
+
+
+
 }

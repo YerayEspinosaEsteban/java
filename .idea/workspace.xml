@@ -5,13 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="93bb313e-6d92-438a-a1a0-4eedb41db5d1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Optimizar_Codigo/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/Optimizar_Codigo14/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Optimizar_Codigo/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/Optimizar_Codigo14/.idea/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Optimizar_Codigo/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Optimizar_Codigo14/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Optimizar_Codigo/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Optimizar_Codigo14/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Optimizar_Codigo/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Optimizar_Codigo14/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Optimizar_Codigo/Optimizar_Codigo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Optimizar_Codigo14/Optimizar_Codigo.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Optimizar_Codigo/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Optimizar_Codigo14/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chalengs_arrays_Espinosa/Projecto_4/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/chalengs_arrays_Espinosa/Projecto_4/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,6 +61,8 @@
       <updated>1728985470742</updated>
       <workItem from="1729616006434" duration="324000" />
       <workItem from="1729618958146" duration="14000" />
+      <workItem from="1729699145634" duration="1285000" />
+      <workItem from="1730149990029" duration="25000" />
     </task>
     <servers />
   </component>
