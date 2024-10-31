@@ -5,34 +5,60 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        char[] simbolos = {'H', 'R', 'D', 'F', 'C', 'G', 'T'}; // De 1,000,000 a 1
-        int[] valores = {1000000, 100000, 10000, 1000, 100, 10, 1};
-
         while (true) {
-            System.out.print("Dame un numero para convertir a jerogrifico: ");
-            int numero = scanner.nextInt();
-
-            if (numero == 0) break;
-            if (numero > 100000 || numero < 0) {
-                System.out.println("El numero es Invalido");
+            String input = scanner.nextLine();
+            if (containsFinAfterDecoding(input)) {
                 break;
             }
-
-            StringBuilder resultado = new StringBuilder();
-
-
-            for (int i = 0; i < valores.length; i++) {
-                int cantidad = numero / valores[i];
-                numero %= valores[i];
-
-                for (int j = 0; j < cantidad; j++) {
-                    resultado.append(simbolos[i]);
-                }
-            }
-
-            System.out.println(resultado.toString());
+            String decodedMessage = decodeMessage(input);
+            int vowelCount = countVowels(decodedMessage);
+            System.out.println(vowelCount);
         }
 
         scanner.close();
+    }
+
+    private static boolean containsFinAfterDecoding(String input) {
+        String decodedMessage = decodeMessage(input);
+        return decodedMessage.contains("FIN");
+    }
+
+    private static String decodeMessage(String input) {
+        char shiftChar = input.charAt(0);
+        StringBuilder decodedMessage = new StringBuilder();
+        int shift = shiftChar - 'p';
+
+        for (int i = 1; i < input.length(); i++) {
+            char currentChar = input.charAt(i);
+            if (Character.isLetter(currentChar)) {
+                char decodedChar = decodeChar(currentChar, -shift);
+                decodedMessage.append(decodedChar);
+            } else {
+                decodedMessage.append(currentChar);
+            }
+        }
+        return decodedMessage.toString();
+    }
+
+    private static char decodeChar(char ch, int shift) {
+        char base;
+        if (Character.isLowerCase(ch)) {
+            base = 'a';
+            return (char) ((ch - base + shift + 26) % 26 + base);
+        } else if (Character.isUpperCase(ch)) {
+            base = 'A';
+            return (char) ((ch - base + shift + 26) % 26 + base);
+        }
+        return ch;
+    }
+
+    private static int countVowels(String message) {
+        int count = 0;
+        for (char ch : message.toCharArray()) {
+            if ("aeiouAEIOU".indexOf(ch) != -1) {
+                count++;
+            }
+        }
+        return count;
     }
 }
