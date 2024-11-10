@@ -26,6 +26,30 @@ public class Barra {
             int SumaPar = 0;
             int SumaImpar = 0;
 
-        }
+            for (int i = codigo.length() -2; i >= 0 ; i--) {
+                contadores++;
+                int digito = Integer.parseInt(String.valueOf(codigo.charAt(i)));
+                if (digito % 2 == 0){
+                    SumaPar = SumaPar + (digito * 1);
+
+                }else{
+                    SumaImpar = SumaImpar + (digito * 3);
+                }
+
+            }
+            int SumaTolal = SumaPar + SumaImpar;
+            int digitoReal = Integer.parseInt(String.valueOf(codigo.charAt(codigo.length()-1)));
+            boolean controlvalido = (digitoReal == SumaTolal);
+
+            if (controlvalido) {
+                System.out.print("SI");
+            } else {
+                System.out.println("NO");
+            }
+
+
+
+            }
+
     }
 }
