@@ -1,8 +1,8 @@
 import java.util.Scanner;
 
 public class Main {
+    public static Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
         System.out.print("Introduce un número entero positivo: ");
         int n = scanner.nextInt();
         int suma = 0;
